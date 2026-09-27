@@ -26,8 +26,7 @@ cask "splitlane" do
   version "0.1.0"
   sha256 "890c6588fd019a985b27b249d7027a220f7b5c6d56c2876b3e5c168aafdabedc"
 
-  url "https://github.com/ivkan/splitlane/releases/download/v#{version}/splitlane-#{version}-aarch64-apple-darwin.dmg",
-      verified: "github.com/ivkan/splitlane/"
+  url "https://github.com/ivkan/splitlane/releases/download/v#{version}/splitlane-#{version}-aarch64-apple-darwin.dmg"
 
   name "Splitlane"
   desc "Native terminal workspace for parallel coding agents"
