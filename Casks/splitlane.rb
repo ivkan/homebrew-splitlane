@@ -23,8 +23,8 @@ cask "splitlane" do
   # These two lines are rewritten on every release by the CI workflow.
   # The placeholders keep the file syntactically valid (so `brew style`
   # passes in CI) and flag that a human-edited version is stale.
-  version "0.1.3"
-  sha256 "dfff5e15eef683c66b36de4321e151e105ffaefa50144118296443d0f82b29eb"
+  version "0.1.4"
+  sha256 "ed54ddde09667d18a511d4fb99bbe796da09e2e1ecb676ab9ba4e81eab4b44e8"
 
   url "https://github.com/ivkan/splitlane/releases/download/v#{version}/splitlane-#{version}-aarch64-apple-darwin.dmg"
 
@@ -36,6 +36,10 @@ cask "splitlane" do
   # that era. Same value as `LSMinimumSystemVersion` in assets/Info.plist.
   # Bumping this here without bumping the plist (or vice versa)
   # causes install-time confusion - keep them synchronised.
+  # The app replaces itself from the title bar, so the version Homebrew
+  # recorded goes stale. This tells `brew upgrade` to leave the app alone
+  # unless asked with `--greedy`, instead of reinstalling over a newer one.
+  auto_updates true
   depends_on macos: :ventura
   depends_on arch: :arm64
 
