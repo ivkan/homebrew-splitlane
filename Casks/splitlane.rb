@@ -23,8 +23,8 @@ cask "splitlane" do
   # These two lines are rewritten on every release by the CI workflow.
   # The placeholders keep the file syntactically valid (so `brew style`
   # passes in CI) and flag that a human-edited version is stale.
-  version "0.2.7"
-  sha256 "7169ad7a91c799057ce2da54c94c8afa6be267deded865a2c0f73c156edb7874"
+  version "0.2.8"
+  sha256 "68e9df30522021cc89fb8869a255e572cc294ce410cf6d09febcc3e79cb7cd3e"
 
   url "https://github.com/ivkan/splitlane/releases/download/v#{version}/splitlane-#{version}-aarch64-apple-darwin.dmg"
 
